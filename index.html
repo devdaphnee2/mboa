@@ -13,17 +13,18 @@
     <!--entete de page-->
 <header id="entete">
    <div class="container">
-    <div id="logo">
-        <a href="#">
-            Mboa <span>Market</span>
-        </a>
-    </div>
-    <div id="menu">
-        <a href="#" id="btn_panier">
-            Panier 
-            <span><i class="fa-solid fa-cart-plus"></i></span>
-        </a>
-    </div>
+        <div id="logo">
+            <a href="#">
+                 Mboa <span>Market</span>
+            </a>
+        </div>
+        <div id="menu">
+            <a href="#" id="btn_panier">
+                Panier 
+                <span><i class="fa-solid fa-cart-plus"></i></span>
+                <span id="nb_articles" class="hide">0</span>
+            </a>
+        </div>
    </div>
 </header>
 
@@ -32,16 +33,67 @@
    <main id="container">
     <!--section courasel-->
     <section id="carrousel">
-       
+        <!--Boutons de navigation des slides-->
+    </section>
 
+        <!-- SECTION BOUTIQUE -->
+         <section id="boutique">
+            <div class="boutique_entete">
+                <h2>Nos produits du Marché</h2>
+                <p id="nb_resultats"></p>
+            </div>
 
-        <!-- Boutons d'option du slide -->
+            <!--Filtre de recherche de produits-->
+            <div class="boutique_outils">
+                <div class="recherche">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" id="recherche" placeholder="Rechercher poivre blanc, oignon..."/>
+                </div>
+                <select  id="tri">
+                    <option value="defaut">
+                        Trier par: recommandés
+                    </option>
+                    <option value="prix_croissant">
+                        prix croissant
+                    </option>
+                      <option value="prix_decroissant">
+                        prix décroissant
+                    </option>
+                      <option value="nom">
+                        Nom(A -> Z)
+                    </option>
+                </select>
+            </div>
+
+            <!--Filtre de recherche des produits-->
+            <div class="boutique_outils"></div>
+
+             <!--Liste des categories-->
+            <div id="categories"></div>
+
+             <!--Liste des produits-->
+             <div id="produits"></div>
+         </section>
          
 
-    </section>
    </main>
+
+   <!--PIED DE PAGE-->
+   <footer id="pied">
+    <p>
+        <b>Mboa <span>Market</span></b>
+        Le goût de ça, chez vous.
+    </p>
+    <p>
+        Tel: 652 33 27 45 | email: mboa@iuc.com
+    </p>
+   </footer>
+
+
     <!--gestion du javascript-->
      <script type="text/javascript" src="js/carrousel.js"></script>
+     <script type="text/javascript" src="js/boutique.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+  
 </body>
 </html>
